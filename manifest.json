@@ -1,0 +1,6 @@
+{
+  "name": "error-sync",
+  "short_name": "error-sync",
+  "start_url": "/",
+  "display": "standalone"
+}

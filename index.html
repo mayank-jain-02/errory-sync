@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>error-sync</title>
+    <meta name="description" content="error-sync description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<script src="/bower_components/tracekit/tracekit.js"></script>
+
+    <link rel="import" href="/src/error-sync-app/error-sync-app.html">
+  </head>
+  <body>
+    <error-sync-app id="errorEle"></error-sync-app>
+  </body>
+</html>
+
+<script type="text/javascript">
+
+	function myfunction() {
+		var a = 10;
+		
+		try {
+			somefunction();			
+		}
+		catch(e) {			
+			errorEle.handle(e, 'mayank');
+		}
+	}
+	
+	myfunction();
+	
+</script>
